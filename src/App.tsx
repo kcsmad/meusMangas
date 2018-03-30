@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import {default as MangaList} from './manga/components/manga-list';
+import * as MangaList from './manga/components/manga-list';
 
 const logo = require('./logo.svg');
 

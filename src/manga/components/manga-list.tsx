@@ -1,11 +1,16 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+
 
 export default class MangaList extends Component {
-    render() {
-        return(
-            <div className="manga-list">
-                <p>Risos</p>
-            </div>
-        );
-    }
+  
+  render() {
+    return(
+      <section class="manga-list">
+        <ul>
+          <MangaListItem />
+        </ul>
+      </section>
+    );
+  }
 }
