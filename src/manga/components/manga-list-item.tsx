@@ -11,19 +11,22 @@ export class MangaListItem extends Component {
     }),
   };
   
-  renderItem() {
+  renderItem(manga) {
     return (
       <li>
-        <h3>{this.props.manga.name}</h3>
-        <p>{this.props.manga.status}</p>
-        <p>{this.props.manga.progress}</p>
+        <h3>{manga.name}</h3>
+        <p>{manga.status}</p>
+        <p>{manga.progress}</p>
       </li>
     );
   }
   
   render() {
+
+    const { manga } = this.props;
+
     return (
-      this.renderItem
+      this.renderItem(manga)
     );
   }
 }
@@ -31,4 +34,4 @@ export class MangaListItem extends Component {
 export default connect(
   state => ({ manga: state.manga }),
   null,
-);
+)(MangaListItem);
